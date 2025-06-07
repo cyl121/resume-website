@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>頁面標題</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <script>
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      const btn = document.getElementById("topBtn");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    }
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+</head>
+<body>
+  <div class="logo">
+    <a href="index.html">
+      <img src="./img/logo.png" alt="Logo">
+    </a>
+  </div>
+
+  <header>
+    <h1>周聿朗</h1>
+    <p>軟體開發學習者｜目標成為前端工程師</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">首頁</a></li>
+      <li><a href="resume.html">履歷</a></li>
+      <li><a href="projects.html">作品集</a></li>
+      <li><a href="contact.html">聯絡我</a></li>
+    </ul>
+  </nav>
+
+  <!-- 請把你的內容段放這裡 -->
+  <section>
+    <h2>聯絡我</h2>
+    <form class="contact-form">
+      <label for="name">姓名</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">信箱</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">訊息</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      
+      <button type="submit">送出</button>
+    </form>
+  </section>
+
+
+  <footer>
+    <p>📧 Email: cyl.0121haha@gmail.com</p>
+    <div class="social-links">
+      <a href="https://github.com/你的帳號" target="_blank">
+        <img src="images/github.png" alt="GitHub">
+      </a>
+      <a href="https://linkedin.com/in/你的帳號" target="_blank">
+        <img src="images/linkedin.png" alt="LinkedIn">
+      </a>
+    </div>
+  </footer>
+
+  <button onclick="topFunction()" id="topBtn" title="回到上方">⬆</button>
+</body>
+</html>
