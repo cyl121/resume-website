@@ -43,10 +43,6 @@ nav a {
   font-weight: bold;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
 .projects {
   display: flex;
   flex-wrap: wrap;
@@ -188,6 +184,30 @@ nav a:hover {
   height: 24px;
   margin: 0 8px;
   vertical-align: middle;
+}
+/* 導覽列底線動畫效果 */
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: #00796b;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+}
+/* 導覽列底線動畫效果 */
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #00796b;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 
