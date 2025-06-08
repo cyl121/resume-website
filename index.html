@@ -41,19 +41,17 @@
   </header>
 
   <header>
-    <div class="logo">Yu Lang Chou</div>
     <nav>
       <a href="index.html">首頁</a>
       <a href="resume.html">履歷</a>
       <a href="projects.html">作品集</a>
       <a href="contact.html">聯絡我</a>
     </nav>
-    <button id="theme-toggle" class="theme-button">🌙</button>
   </header>
 
-  <section>
-    <h2>簡介</h2>
-    <p>你好，我目前正在學習前端與 AI 應用開發，希望成為一名軟體工程師，持續提升自己的實作能力。</p>
+  <section class="intro-section">
+    <h1>歡迎來到我的個人網站</h1>
+    <p id="typed-text" class="typed-text"></p>
   </section>
 
   <section class="skills">
@@ -86,6 +84,21 @@
       toggleButton.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
     });
   </script>
-</body>
 
+  <script>
+    const text = "你好，我目前正在學習前端與 AI 應用開發。未來希望朝向軟體工程師發展！";
+    const typedTextElement = document.getElementById("typed-text");
+
+    let index = 0;
+    function typeCharacter() {
+      if (index < text.length) {
+        typedTextElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeCharacter, 80); // 每 80ms 打一個字
+      }
+    }
+
+    window.addEventListener("load", typeCharacter);
+  </script>
+</body>
 </html>
