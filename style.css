@@ -254,6 +254,40 @@ nav a:hover::after {
   opacity: 0; /* 預設為透明，動畫時會顯示 */
 }
 
+.skills-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+/*進度條*/
+.skill span {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.progress-bar {
+  background-color: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  background-color: #76c7c0;
+  text-align: right;
+  line-height: 20px;
+  color: white;
+  padding-right: 10px;
+  border-radius: 20px;
+  transition: width 1.5s ease;
+}
+
 
 
 
