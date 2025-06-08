@@ -287,6 +287,36 @@ nav a:hover::after {
   border-radius: 20px;
   transition: width 1.5s ease;
 }
+/* 夜間主題樣式 */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+body.dark-mode .project-card,
+body.dark-mode .timeline li,
+body.dark-mode .skill,
+body.dark-mode .progress-bar {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  border-color: #444;
+}
+/* 主題切換按鈕樣式 */
+.theme-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: inherit;
+  margin-left: 10px;
+}
+
 
 
 
