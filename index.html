@@ -27,21 +27,20 @@
 </head>
 <body>
 
-  <div class="logo">
-    <a href="index.html">
-        <img src="./img/logo.png" alt="Logo">
-    </a>
+  <div class="logo-container">
+    <img src="./img/logo.png" alt="Logo" class="logo-img">
+    <span class="logo-name">Yu Lang Chou</span>
   </div>
 
-  <header>
-    <h1>周聿朗</h1>
-    <p>軟體開發學習者｜目標成為前端工程師</p>
-
+  <header class="main-header">
+    
     <button id="theme-toggle" class="theme-button">🌙</button>
-  </header>
 
-  <header>
-    <nav>
+    <!-- ✅ 漢堡按鈕 -->
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+
+    <!-- ✅ 導覽列選單 -->
+    <nav class="navbar" id="navbar">
       <a href="index.html">首頁</a>
       <a href="resume.html">履歷</a>
       <a href="projects.html">作品集</a>
@@ -99,6 +98,17 @@
     }
 
     window.addEventListener("load", typeCharacter);
+  </script>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbar = document.getElementById("navbar");
+
+    if (menuToggle && navbar) {
+      menuToggle.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+      });
+    }
   </script>
 </body>
 </html>

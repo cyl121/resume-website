@@ -345,6 +345,126 @@ body.dark-mode section {
   color: #f1f1f1 !important;
   border: 1px solid #444;
 }
+/*讓 logo 圖片 + 文字並排顯示（使用 flex）*/
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 圖片與文字之間的間距 */
+}
+
+.logo-img {
+  height: 40px;  /* 可依你 logo 大小調整 */
+}
+
+.logo-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #494444; /* ✅ 深灰色，比黑色柔和又清晰 */
+  text-shadow: 0 0 2px #ccc;
+}
+body.dark-mode .logo-name {
+  color: #f1f1f1;
+}
+/* 手機版預設隱藏 nav 選單 */
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #222;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  .navbar a {
+    color: white;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+  }
+
+  /* 導覽列橫排在桌機上 */
+  nav.navbar {
+    flex-direction: row;
+  }
+}
+
+/* 桌機預設顯示導覽列，隱藏漢堡 */
+.menu-toggle {
+  display: none;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  background-color: #e0f7fa;
+  border-radius: 10px;
+}
+
+/* 讓 logo-container、主題切換與漢堡排列正常 */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    position: static; /* ✅ 這樣才不會出現在頂端被遮蓋 */
+  }
+}
+/*修正 CSS 讓手機顯示正常*/
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+    flex-direction: column;
+    background-color: #1e1e1e;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #00796b;
+    z-index: 1100;
+  }
+
+  .main-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 
 
 
