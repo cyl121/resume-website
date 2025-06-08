@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>頁面標題</title>
+  <title>聯絡我</title>
   <link rel="stylesheet" href="style.css" />
 
   <script>
@@ -66,6 +66,9 @@
 
       <button type="submit">送出</button>
     </form>
+    <div id="success-message" style="display:none; color: green; margin-top: 10px; text-align:center;">
+      ✅ 感謝您的來信，我會盡快與您聯繫！
+    </div>
   </section>
 
 
@@ -77,10 +80,10 @@
     </p>
     <div class="social-links">
       <a href="https://github.com/你的帳號" target="_blank">
-        <img src="images/github.png" alt="GitHub">
+        <img src="./img/Github.png" alt="GitHub">
       </a>
       <a href="https://linkedin.com/in/你的帳號" target="_blank">
-        <img src="images/linkedin.png" alt="LinkedIn">
+        <img src="./img/LinkedIn.png" alt="LinkedIn">
       </a>
     </div>
   </footer>
@@ -93,7 +96,8 @@
 
       emailjs.sendForm("service_0y11phd", "template_wv0x3zx", this)
         .then(function(response) {
-          alert("✅ 訊息已成功發送！");
+          // 顯示訊息
+          document.getElementById("success-message").style.display = "block";
           document.getElementById("contact-form").reset(); // 清除表單
         }, function(error) {
           alert("❌ 發送失敗，請稍後再試。");
