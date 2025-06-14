@@ -464,6 +464,22 @@ body.dark-mode .logo-name {
     align-items: center;
   }
 }
+/* 固定在右上角的 theme 按鈕樣式 */
+.floating-theme {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  font-size: 22px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 38px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
 
 
