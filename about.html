@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>關於我</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="logo">
+    <a href="index.html">
+      <img src="./img/logo.png" alt="Logo">
+    </a>
+  </div>
+
+  <header class="main-header">
+    <button id="theme-toggle" class="theme-button">🌙</button>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+    <nav class="navbar" id="navbar">
+      <a href="index.html">首頁</a>
+      <a href="resume.html">履歷</a>
+      <a href="projects.html">作品集</a>
+      <a href="contact.html">聯絡我</a>
+      <a href="about.html">關於我</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>我的背景與興趣</h2>
+    <p>
+      我自高中電子科起便對科技領域產生興趣，進入大學後持續學習資訊技術，特別對前端網頁與 AI 應用產生熱情。<br>
+      我的個性主動學習、喜歡實作與解決問題，並且習慣將學習過程做紀錄與整理。
+    </p>
+  </section>
+
+  <section>
+    <h2>職涯目標</h2>
+    <p>
+      我的長期目標是成為一名能熟練使用 LLM 技術、並實作 RAG 系統的軟體工程師，加入國內或國際的技術團隊，推動 AI 在教育與知識管理上的應用。
+    </p>
+  </section>
+
+  <footer>
+    <p>📧 Email: cyl.0121haha@gmail.com</p>
+  </footer>
+
+  <button onclick="topFunction()" id="topBtn" title="回到上方">⬆</button>
+
+  <script>
+    const toggleButton = document.getElementById("theme-toggle");
+    toggleButton.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      toggleButton.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    });
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbar = document.getElementById("navbar");
+    if (menuToggle && navbar) {
+      menuToggle.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+      });
+    }
+
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+</body>
+</html>
