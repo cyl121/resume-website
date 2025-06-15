@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Resume</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- 語言對應 hreflang -->
+  <link rel="alternate" hreflang="zh-Hant" href="https://cyl121.github.io/resume-website/index.html" />
+  <link rel="alternate" hreflang="en" href="https://cyl121.github.io/resume-website/index-en.html" />
+</head>
+<body>
+  <button id="theme-toggle" class="theme-button floating-theme">🌙</button>
+
+  <a href="index-en.html" class="logo-container">
+    <img src="./img/logo.png" alt="Logo" class="logo-img">
+    <span class="logo-name">Yu Lang Chou</span>
+  </a>
+
+  <header class="main-header">
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+    <nav class="navbar" id="navbar">
+      <a href="index-en.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="index.html" style="margin-left:auto;" title="切換中文">🌐 中文</a>
+    </nav>
+  </header>
+
+  <section class="intro-section">
+    <h1>Welcome to My Personal Website</h1>
+    <p id="typed-text" class="typed-text"></p>
+  </section>
+
+  <section class="skills">
+    <h2>Skills</h2>
+    <div class="skill-icons">
+      <img src="./img/HTML.png" alt="HTML">
+      <img src="./img/CSS.png" alt="CSS">
+      <img src="./img/JavaScript.png" alt="JavaScript">
+      <img src="./img/Python.png" alt="Python">
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>About Me</h2>
+    <p>
+      Hi, I'm Yu Lang Chou, currently studying Information Management at Chaoyang University of Technology.
+      I'm passionate about front-end development and AI applications.
+      I enjoy combining creativity and technology to build practical projects, such as a todo list system, a payment platform, and a Kotlin-based mobile app.
+    </p>
+    <p>
+      My goal is to become a self-driven software engineer, ideally working with LLM (Large Language Models) and RAG (Retrieval-Augmented Generation) systems in Japan or global tech companies.
+    </p>
+  </section>
+
+  <footer>
+    <p>📧 Email: cyl.0121haha@gmail.com</p>
+    <p style="text-align:center; font-style:italic;">
+      Resume Website URL:<br>
+      <a href="https://cyl121.github.io/resume-website/" target="_blank">https://cyl121.github.io/resume-website/</a>
+    </p>
+  </footer>
+
+  <button onclick="topFunction()" id="topBtn" title="Back to Top">⬆</button>
+
+  <script>
+    const toggleButton = document.getElementById("theme-toggle");
+    toggleButton.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      toggleButton.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    });
+
+    const text = "Hi! I'm currently learning front-end and AI development, hoping to become a software engineer in the future!";
+    const typedTextElement = document.getElementById("typed-text");
+    let index = 0;
+    function typeCharacter() {
+      if (index < text.length) {
+        typedTextElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeCharacter, 80);
+      }
+    }
+    window.addEventListener("load", typeCharacter);
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbar = document.getElementById("navbar");
+    if (menuToggle && navbar) {
+      menuToggle.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+      });
+    }
+
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+</body>
+</html>
