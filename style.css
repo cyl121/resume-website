@@ -480,6 +480,53 @@ body.dark-mode .logo-name {
   line-height: 38px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+/*CSS 美化*/
+.about-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+
+body.dark-mode .about-section {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  border: 1px solid #444;
+}
+/* 下載履歷 */
+.download-resume {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00796b;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #004d40;
+}
+
+body.dark-mode .download-button {
+  background-color: #26a69a;
+  color: #fff;
+}
+
+body.dark-mode .download-button:hover {
+  background-color: #00897b;
+}
 
 
 
