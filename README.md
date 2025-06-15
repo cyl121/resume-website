@@ -64,4 +64,6 @@
 
 如需詳細筆記，請參考附加檔案：  
 📄 [`project-filter-notes.md`](./project-filter-notes.md)
+📄 [language-guide.md](./language-guide.md)
+
 
