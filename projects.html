@@ -48,39 +48,45 @@
   <!-- 內容段放這裡 -->
   <section class="projects-section">
   <h2>我的作品集</h2>
+  
+  <div class="filter-buttons">
+    <button onclick="filterProjects('all')">全部</button>
+    <button onclick="filterProjects('frontend')">前端作品</button>
+    <button onclick="filterProjects('backend')">全端作品</button>
+    <button onclick="filterProjects('app')">APP 開發</button>
+  </div>
+
   <div class="projects-grid">
-  
-  <div class="project-card" style="animation-delay: 0s;">
-    <img src="./img/project1.png" alt="我的履歷網站">
-    <h3>我的履歷網站</h3>
-    <p>這是我用 HTML、CSS 製作的個人網站。</p>
-    <a href="https://cyl121.github.io/resume-website/" target="_blank">前往查看 →</a>
-  </div>
-  
-  <div class="project-card" style="animation-delay: 0s;">
-    <img src="./img/project2.png" alt="簡易支付系統網站">
-    <h3>簡易支付系統網站</h3>
-    <p>使用 Node.js + MySQL 和 HTML/CSS/JS。</p>
-    <a href="https://github.com/cyl121/payment-system" target="_blank">前往查看 →</a>
-  </div>
+    <div class="project-card frontend">
+      <img src="./img/project1.png" alt="我的履歷網站">
+      <h3>我的履歷網站</h3>
+      <p>這是我用 HTML、CSS 製作的個人網站。</p>
+      <a href="https://cyl121.github.io/resume-website/" target="_blank">前往查看 →</a>
+    </div>
 
-  <div class="project-card" style="animation-delay: 0s;">
-    <img src="./img/project3.png" alt="我製作的一個猜節日APP">
-    <h3>我製作的一個猜節日APP</h3>
-    <p>這是我用 Kotlin 製作的一個小APP。</p>
-    <a href="https://github.com/cyl121/festival-guess" target="_blank">前往查看 →</a>
-  </div>
+    <div class="project-card frontend backend">  <!-- ✅ 同時屬於前端與全端 -->
+      <img src="./img/project2.png" alt="簡易支付系統網站">
+      <h3>簡易支付系統網站</h3>
+      <p>使用 Node.js + MySQL 和 HTML/CSS/JS。</p>
+      <a href="https://github.com/cyl121/payment-system" target="_blank">前往查看 →</a>
+    </div>
 
-  <div class="project-card" style="animation-delay: 0s;">
-    <img src="./img/project4.png" alt="Todo List 專案">
-    <h3>Todo List 專案</h3>
-    <p>一個全端製作的簡易任務列表系統，使用 Node.js + MySQL 和 HTML/CSS/JS 完成。</p>
-    <a href="https://github.com/cyl121/todo-list" target="_blank">前往查看 →</a>
-  </div>
+    <div class="project-card app">
+      <img src="./img/project3.png" alt="我製作的一個猜節日APP">
+      <h3>我製作的一個猜節日APP</h3>
+      <p>這是我用 Kotlin 製作的一個小APP。</p>
+      <a href="https://github.com/cyl121/festival-guess" target="_blank">前往查看 →</a>
+    </div>
 
-  </div>
-</section>
+    <div class="project-card backend">
+      <img src="./img/project4.png" alt="Todo List 專案">
+      <h3>Todo List 專案</h3>
+      <p>全端任務列表系統，使用 Node.js + MySQL 和 HTML/CSS/JS。</p>
+      <a href="https://github.com/cyl121/todo-list" target="_blank">前往查看 →</a>
+    </div>
 
+    </div>
+  </section>
 
   <footer>
     <p>📧 Email: cyl.0121haha@gmail.com</p>
@@ -108,6 +114,19 @@
     if (menuToggle && navbar) {
       menuToggle.addEventListener("click", () => {
         navbar.classList.toggle("active");
+      });
+    }
+  </script>
+  <!--篩選功能-->
+  <script>
+    function filterProjects(category) {
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        if (category === 'all') {
+          card.style.display = 'block';
+        } else {
+          card.style.display = card.classList.contains(category) ? 'block' : 'none';
+        }
       });
     }
   </script>
