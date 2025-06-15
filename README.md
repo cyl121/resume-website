@@ -35,3 +35,32 @@
 
 本專案僅作為個人履歷作品展示用途，歡迎參考但請勿直接抄襲。
 
+---
+
+## 📌 補充說明：作品分類與篩選邏輯
+
+此網站的作品集頁面支援分類功能，使用 JS 與 class 名稱比對進行篩選。篩選邏輯如下：
+
+### 篩選按鈕用法：
+
+```html
+<button onclick="filterProjects('frontend')">前端作品</button>
+<button onclick="filterProjects('backend')">全端作品</button>
+<button onclick="filterProjects('llm')">LLM 專案</button>
+```
+
+### 對應卡片結構：
+
+```html
+<div class="project-card frontend backend">
+  <h3>支付系統</h3>
+  <p>整合 Node.js + MySQL 與前端介面</p>
+</div>
+```
+
+> 每張卡片可同時屬於多個分類，透過 class 指定類別名稱。
+
+---
+
+如需詳細筆記，請參考附加檔案：  
+📄 [`作品集分類篩選補充筆記.md`](./作品集分類篩選補充筆記.md)
