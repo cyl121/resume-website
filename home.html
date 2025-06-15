@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting...</title>
+  <script>
+    const lang = navigator.language || navigator.userLanguage;
+    if (lang.startsWith("zh")) {
+      window.location.href = "index.html";
+    } else {
+      window.location.href = "index-en.html";
+    }
+  </script>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 100px;
+    }
+  </style>
+</head>
+<body>
+  <p>Detecting language... Redirecting to your version.</p>
+</body>
+</html>
