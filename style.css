@@ -554,6 +554,46 @@ body.dark-mode .filter-buttons button {
 body.dark-mode .filter-buttons button:hover {
   background-color: #00897b;
 }
+/*RWD 優化 CSS 手機板樣式*/
+@media (max-width: 768px) {
+  /* 導覽列選單字體放大 */
+  .navbar a {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  /* 卡片自適應寬度 */
+  .project-card {
+    width: 90%;
+    margin: auto;
+  }
+
+  /* 技能圖示圖寬自適應 */
+  .skill-icons img {
+    width: 50px;
+    height: auto;
+  }
+
+  /* 聯絡表單欄位全寬 */
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  /* 按鈕間距調整 */
+  .filter-buttons button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  /* footer 字體微放大 */
+  footer {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
 
 
 
